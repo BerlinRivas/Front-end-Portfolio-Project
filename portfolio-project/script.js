@@ -45,65 +45,71 @@ const fillCharacterBox = (json, lookUp) => {
          label.textContent = lookUp
          characterBox.append(label)
 
+         
+
          let resultName = json.results[0].name
          let name = document.createElement('li')
          name.className = 'character-box'
          name.innerHTML = `<strong>Name:</strong> ${resultName}`
          characterBox.append(name)
 
-         let resultHeight = json.results[0].height 
-         let height = document.createElement('li')
-         height.className = 'character-box'
-         height.innerHTML = `<strong>Height:</strong> ${resultHeight}`
-         characterBox.append(height)
+         if(json.results[0].height) {
 
-         let resultMass = json.results[0].mass
-         let mass = document.createElement('li')
-         mass.className = 'character-box'
-         mass.innerHTML = `<strong>Mass:</strong> ${resultMass}`
-         characterBox.append(mass)
-         
-         let resultHairColor = json.results[0].hair_color
-         let hairColor = document.createElement('li')
-         hairColor.className = 'character-box'
-         hairColor.innerHTML = `<strong>Hair color:</strong> ${resultHairColor}`
-         characterBox.append(hairColor)
-         
-         let resultSkinColor = json.results[0].skin_color
-         let skinColor = document.createElement('li')
-         skinColor.className = 'character-box'
-         skinColor.innerHTML = `<strong>Skin-Color:</strong> ${resultSkinColor}`
-         characterBox.append(skinColor)
+               let resultHeight = json.results[0].height 
+               let height = document.createElement('li')
+               height.className = 'character-box'
+               height.innerHTML = `<strong>Height:</strong> ${resultHeight}`
+               characterBox.append(height)
 
-         let resultEyeColor = json.results[0].eye_color
-         let eyeColor = document.createElement('li')
-         eyeColor.className = 'character-box'
-         eyeColor.innerHTML = `<strong>Eye-Color:</strong> ${resultEyeColor}`
-         characterBox.append(eyeColor)
+               let resultMass = json.results[0].mass
+               let mass = document.createElement('li')
+               mass.className = 'character-box'
+               mass.innerHTML = `<strong>Mass:</strong> ${resultMass}`
+               characterBox.append(mass)
+               
+               let resultHairColor = json.results[0].hair_color
+               let hairColor = document.createElement('li')
+               hairColor.className = 'character-box'
+               hairColor.innerHTML = `<strong>Hair color:</strong> ${resultHairColor}`
+               characterBox.append(hairColor)
+               
+               let resultSkinColor = json.results[0].skin_color
+               let skinColor = document.createElement('li')
+               skinColor.className = 'character-box'
+               skinColor.innerHTML = `<strong>Skin-Color:</strong> ${resultSkinColor}`
+               characterBox.append(skinColor)
 
-         let resultBirthYear = json.results[0].birth_year
-         let birthYear = document.createElement('li')
-         birthYear.className = 'character-box'
-         birthYear.innerHTML = `<strong>Birth-Year:</strong> ${resultBirthYear}`
-         characterBox.append(birthYear)
+               let resultEyeColor = json.results[0].eye_color
+               let eyeColor = document.createElement('li')
+               eyeColor.className = 'character-box'
+               eyeColor.innerHTML = `<strong>Eye-Color:</strong> ${resultEyeColor}`
+               characterBox.append(eyeColor)
 
-         
-         let resultGender = json.results[0].gender 
-         let gender = document.createElement('li')
-         gender.className = 'character-box'
-         gender.innerHTML = `<strong>Gender:</strong> ${resultGender}`
-         characterBox.append(gender)
+               let resultBirthYear = json.results[0].birth_year
+               let birthYear = document.createElement('li')
+               birthYear.className = 'character-box'
+               birthYear.innerHTML = `<strong>Birth-Year:</strong> ${resultBirthYear}`
+               characterBox.append(birthYear)
 
-         let resultHomeWorld = json.results[0].homeworld 
-         let homeWorld = document.createElement('li')
-         homeWorld.className = 'character-box'
-         homeWorld.innerHTML = `<strong>Homeworld:</strong> ${resultHomeWorld}`
-         characterBox.append(homeWorld)
+               
+               let resultGender = json.results[0].gender 
+               let gender = document.createElement('li')
+               gender.className = 'character-box'
+               gender.innerHTML = `<strong>Gender:</strong> ${resultGender}`
+               characterBox.append(gender)
 
+               let resultHomeWorld = json.results[0].homeworld 
+               let homeWorld = document.createElement('li')
+               homeWorld.className = 'character-box'
+               homeWorld.innerHTML = `<strong>Homeworld:</strong> ${resultHomeWorld}`
+               characterBox.append(homeWorld)
+         }
 
 
     //This part specifies on planets
-    if(json.rotation_period) {
+  
+      if(json.results[0].rotation_period) {
+         
          let resultRotationPeriod = json.results[0].rotation_period
          let rotationPeriod = document.createElement('li')
          rotationPeriod.className = 'character-box'
@@ -153,22 +159,23 @@ const fillCharacterBox = (json, lookUp) => {
          population.className = 'character-box'
          population .innerHTML = `<strong>Population:</strong> ${resultPopulation}`
          characterBox.append(population)
-    }
     
+      }
     //this part specifies on starships
-    if(json.manufacturer) {
-         let resultManufacturer = json.results[0].manufacturer
-         let manufacturer = document.createElement('li')
-         manufacturer.className = 'character-box'
-         manufacturer.innerHTML = `<strong>Manufacturer:</strong> ${resultManufacturer}`
-         characterBox.append(manufacturer)
+   
+        if(json.results[0].model) { 
+            let resultManufacturer = json.results[0].manufacturer
+               let manufacturer = document.createElement('li')
+               manufacturer.className = 'character-box'
+               manufacturer.innerHTML = `<strong>Manufacturer:</strong> ${resultManufacturer}`
+               characterBox.append(manufacturer)
 
-         let resultModel = json.results[0].model
-         let model = document.createElement('li')
-         model.className = 'character-box'
-         model.innerHTML = `<strong>Model:</strong> ${resultModel}`
-         characterBox.append(model)
-    }
+               let resultModel = json.results[0].model
+               let model = document.createElement('li')
+               model.className = 'character-box'
+               model.innerHTML = `<strong>Model:</strong> ${resultModel}`
+               characterBox.append(model)
+        }
 
-    console.log(json.results[0].rotation_period)
+    console.log(json.results[0].manufacturer)
 }
