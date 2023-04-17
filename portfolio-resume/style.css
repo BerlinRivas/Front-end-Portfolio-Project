@@ -1,0 +1,158 @@
+ .header h1 {
+    border: 4px solid gray;
+    background-color: skyblue;
+    /* -webkit-text-stroke: 2px black; */
+    font-family: 'Fjalla One', sans-serif;
+ }
+
+ /* .logo-image img {
+    height: 30px;
+    
+ } */
+
+ body {
+   background-color: lavender;
+
+ }
+
+ 
+ .header p {
+    text-align: center;
+   justify-content: center;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: underline;
+}
+
+
+.link  {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.link:hover {
+  box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
+}
+
+.intro-body-text h2 {
+   color:aqua;
+}
+
+.intro-body-text h3 {
+   text-align: left ;
+}
+
+body {
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.last-body-text h2 {
+   color:yellow;
+}
+
+input[type=text], select, textarea {
+   width: 100%; /* Full width */
+   padding: 12px; /* Some padding */ 
+   border: 1px solid #ccc; /* Gray border */
+   border-radius: 4px; /* Rounded borders */
+   box-sizing: border-box; /* Make sure that padding and width stays in place */
+   margin-top: 6px; /* Add a top margin */
+   margin-bottom: 16px; /* Bottom margin */
+   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+ }
+ 
+ /* Style the submit button with a specific background color etc */
+ input[type=submit] {
+   background-color: skyblue;
+   color: white;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+ 
+ /* When moving the mouse over the submit button, add a darker green color */
+ input[type=submit]:hover {
+   background-color: blue;
+ }
+ 
+ /* Add a background color and some padding around the form */
+ .container {
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   padding: 20px;
+ }
+
+ .contact-questions-box h2{
+   color: skyblue;
+ }
+
+ .contact-questions-box  h3 {
+   text-align: center;
+ }
+
+ .header h1 a {
+   border: 4px solid gray;
+   background-color: skyblue;
+   /* -webkit-text-stroke: 2px black; */
+   font-family: 'Fjalla One', sans-serif;
+ }
+
+ #logo {
+   cursor: pointer;
+ }
+
+ #image-one  {
+   /* width:35%;
+   text-shadow: 5px 5px black; */
+   width:350px ;
+   height:250px;
+   border-radius: 10%;
+ }
+
+ #image-one:hover {
+   cursor: pointer;
+   color: #111; 
+   background: greenyellow; 
+   box-shadow: 0 0 100px skyblue; 
+ }
+
+ #star-wars-title {
+   font-family: 'Poller One', cursive;
+   color: black;
+   padding-left: 15px;
+   -webkit-text-stroke: 1px yellow;
+ }
+
+ #image-two {
+   width:350px ;
+   height:250px;
+   border-radius: 10%;
+ }
+
+ #image-two:hover {
+   cursor: pointer;
+   color: #111; 
+   background: greenyellow; 
+   box-shadow: 0 0 100px skyblue; 
+ }
+
+ #weather-title {
+   font-family: 'Poller One', cursive;
+   color: black;
+   padding-left: 15px;
+   -webkit-text-stroke: 1px yellow;
+ }
